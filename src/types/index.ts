@@ -1,16 +1,17 @@
-enum AccountType {
-  Savings = "savings",
-  Investment = "investment",
-  Property = "property",
-  Liability = "liability",
+export enum AccountType {
+  Savings = 'savings',
+  Investment = 'investment',
+  Property = 'property',
+  Liability = 'liability',
 }
-interface Account {
+export interface Account {
+  id: string;
   name: string;
   type: AccountType;
   balance: number;
   lastUpdated?: Date;
 }
-interface NetWorthData {
+export interface NetWorthData {
   asset: number;
   liability: number;
   calcDate: Date;
